@@ -1,0 +1,6 @@
+[load_balancer]
+192.168.156.202 ansible_ssh=root ansible_ssh_pass=saurabh ansible_connection=ssh
+
+[web]
+192.168.156.84 ansible_ssh=root ansible_ssh_pass=saurabh ansible_connection=ssh
+192.168.156.230 ansible_ssh=root ansible_ssh_pass=saurabh ansible_connection=ssh
