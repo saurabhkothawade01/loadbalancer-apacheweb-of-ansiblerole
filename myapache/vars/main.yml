@@ -1,0 +1,8 @@
+---
+# vars file for myapache
+
+web_package_name: httpd
+dest_loc: /var/www/html
+src_loc: index.html
+
+

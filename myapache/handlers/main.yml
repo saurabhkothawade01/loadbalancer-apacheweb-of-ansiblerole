@@ -1,0 +1,7 @@
+---
+# handlers file for myapache
+
+- name: "web_restart"
+  service:
+          name: "{{ web_package_name }}"
+          state: restarted

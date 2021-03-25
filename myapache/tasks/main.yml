@@ -1,0 +1,18 @@
+---
+# tasks file for myapache
+
+- name: "Installing HTTPD Software"
+  package:
+          name: "{{ web_package_name }}"
+          state: present
+
+- name: "Copy Files"
+  template:
+          dest: "{{ dest_loc }}"
+          src: "{{ src_loc }}"
+  notify: "web_restart"
+
+- name: "Starting Web Server"
+  service:
+          name: "{{ web_package_name }}"
+          state: started
