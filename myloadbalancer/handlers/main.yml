@@ -1,0 +1,7 @@
+---
+# handlers file for myloadbalancer
+
+- name: "Haproxy_restart"
+  service:
+            name: "{{ lb_package_name }}"
+            state: restarted

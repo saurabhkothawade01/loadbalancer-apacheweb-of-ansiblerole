@@ -1,0 +1,19 @@
+---
+# tasks file for myloadbalancer
+
+- name: "Installing Haproxy Software"
+  package:
+               name: "{{ lb_package_name }}"
+               state: present
+
+- name: "Copy file"
+  template:
+               src: "{{ src_loc }}"
+               dest: "{{ dest_loc }}"
+
+
+- name: "Started Haproxy Service"
+  service:
+               name: "{{ lb_package_name }}"
+               state: started
+  notify: "Haproxy_restart"

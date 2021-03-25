@@ -1,0 +1,6 @@
+---
+# vars file for myloadbalancer
+
+lb_package_name: haproxy
+dest: /etc/haproxy/
+src: haproxy.cfg
